@@ -20,9 +20,10 @@ app.get("/", (req, res) =>{
     res.send("Notes API From CheezyCode");
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
+const uri = "mongodb+srv://admin:admin@cluster0.patigyo.mongodb.net/?retryWrites=true&w=majority";
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(uri)
 .then(()=>{
     app.listen(PORT, ()=>{
         console.log("Server started on port no. " + PORT);
