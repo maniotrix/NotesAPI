@@ -1,7 +1,7 @@
 const userModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY2OTYzMjU1NSwiaWF0IjoxNjY5NjMyNTU1fQ.T5Hg6SdPcG4wmwZjXYsRT7kVxsx9ly94mU_zRYajRLw";
+const SECRET_KEY = process.env.SECRET_KEY;
 
 const signup = async (req, res) =>{
 
