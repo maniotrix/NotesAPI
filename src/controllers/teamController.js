@@ -1,62 +1,44 @@
-const userModel = require("../models/user");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const SECRET_KEY = process.env.SECRET_KEY;
+const teamModel = require("../models/team");
 
-const signup = async (req, res) =>{
-
-    const {username, email, password} = req.body;
-    try {
-
-        const existingUser = await userModel.findOne({ email : email});
-        if(existingUser){
-            return res.status(400).json({message: "User already exists"});
-        }
-
-        const hashedPassword = await bcrypt.hash(password, 10);
-
-        const result = await userModel.create({
-            email: email,
-            password: hashedPassword,
-            username: username
-        });
-
-        const token = jwt.sign({email : result.email, id : result._id }, SECRET_KEY);
-        res.status(201).json({user: result, token: token});
-        
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({message: "Something went wrong"});
-    }
-
-}
-
-const signin = async (req, res)=>{
+const createTeam = async (req, res) =>{
     
-    const {email, password} = req.body;
+    const {team1, team2, match_status, date, match_mode,tournament} = req.body;
+
+    const newTeam = new teamModel({
+        team1: team1,
+        team2 : team2,
+        match_status : match_status,
+        date : date,
+        match_mode: match_mode,
+        tournament : tournament,
+        userId : req.userId
+    });
 
     try {
         
-        const existingUser = await userModel.findOne({ email : email});
-        if(!existingUser){
-            return res.status(404).json({message: "User not found"});
-        }
-
-        const matchPassword = await bcrypt.compare(password, existingUser.password);
-
-        if(!matchPassword){
-            return res.status(400).json({message : "Invalid Credentials"});
-        }
-
-        const token = jwt.sign({email : existingUser.email, id : existingUser._id }, SECRET_KEY);
-        res.status(200).json({user: existingUser, token: token});
-
+        await newTeam.save();
+        res.status(201).json(newTeam);
 
     } catch (error) {
         console.log(error);
         res.status(500).json({message: "Something went wrong"});
     }
-
+    
 }
 
-module.exports = { signup, signin };
+const getTeams = async (req, res) =>{
+    try {
+        
+        const teams = await teamModel.find({userId : req.userId});
+        res.status(200).json(teams);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message: "Something went wrong"});
+    }
+}
+
+module.exports = {
+    createTeam,
+    getTeams
+}
