@@ -2,16 +2,16 @@ const contestModel = require("../models/contest");
 
 const createContest = async (req, res) =>{
     
-    const {team1, team2, contest_status, date, contest_mode,tournament} = req.body;
+    const {match_id, prize_pool, entry_fee, total_spots, first_prize,winnner_teams_percent,max_team_entries} = req.body;
 
     const newContest = new contestModel({
-        team1: team1,
-        team2 : team2,
-        contest_status : contest_status,
-        date : date,
-        contest_mode: contest_mode,
-        tournament : tournament,
-        userId : req.userId
+        match_id : match_id,
+        prize_pool : prize_pool,
+        entry_fee : entry_fee,
+        total_spots : total_spots,
+        first_prize : first_prize,
+        winnner_teams_percent : winnner_teams_percent,
+        max_team_entries : max_team_entries,
     });
 
     try {
