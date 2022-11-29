@@ -26,6 +26,10 @@ const MatchSchema = mongoose.Schema({
         type : String,
         required: true
     },
+    mega_prize : {
+        type : String,
+        required: true
+    },
 
 }, {timestamps : true});
 

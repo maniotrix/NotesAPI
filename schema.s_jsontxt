@@ -9,3 +9,15 @@ Contest:
     "winnner_teams_percent" : 55,
     "max_team_entries" : 20
 }
+
+Match:
+
+{
+    "team1" : "RR",
+    "team2" : "KXIP",
+    "match_status" : "PENDING",
+    "date" : "5-12-2022",
+    "match_mode" : "NIGHT",
+    "tournament" : "IPL T20 2022",
+    "mega_prize": "₹1.5 Crores"
+}

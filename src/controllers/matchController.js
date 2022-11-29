@@ -2,7 +2,7 @@ const matchModel = require("../models/match");
 
 const createMatch = async (req, res) =>{
     
-    const {team1, team2, match_status, date, match_mode,tournament} = req.body;
+    const {team1, team2, match_status, date, match_mode,tournament,mega_prize} = req.body;
 
     const newMatch = new matchModel({
         team1: team1,
@@ -11,7 +11,8 @@ const createMatch = async (req, res) =>{
         date : date,
         match_mode: match_mode,
         tournament : tournament,
-        userId : req.userId
+        userId : req.userId,
+        mega_prize : mega_prize
     });
 
     try {
