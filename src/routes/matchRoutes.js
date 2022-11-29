@@ -1,5 +1,5 @@
 const express = require("express");
-const { getTeams, createTeam, getMatches, createMatch } = require("../controllers/matchController");
+const { getMatches, createMatch } = require("../controllers/matchController");
 const auth = require("../middlewares/auth");
 const matchRouter = express.Router();
 
