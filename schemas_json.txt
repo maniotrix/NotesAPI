@@ -13,8 +13,8 @@ Contest:
 Match:
 
 {
-    "team1" : "RR",
-    "team2" : "KXIP",
+    "team1" : "KKR",
+    "team2" : "LSG",
     "match_status" : "PENDING",
     "date" : "5-12-2022",
     "match_mode" : "NIGHT",
