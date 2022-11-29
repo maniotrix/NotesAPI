@@ -1,10 +1,10 @@
-const teamModel = require("../models/team");
+const matchModel = require("../models/match");
 
-const createTeam = async (req, res) =>{
+const createMatch = async (req, res) =>{
     
     const {team1, team2, match_status, date, match_mode,tournament} = req.body;
 
-    const newTeam = new teamModel({
+    const newMatch = new matchModel({
         team1: team1,
         team2 : team2,
         match_status : match_status,
@@ -16,8 +16,8 @@ const createTeam = async (req, res) =>{
 
     try {
         
-        await newTeam.save();
-        res.status(201).json(newTeam);
+        await newMatch.save();
+        res.status(201).json(newMatch);
 
     } catch (error) {
         console.log(error);
@@ -26,10 +26,10 @@ const createTeam = async (req, res) =>{
     
 }
 
-const getTeams = async (req, res) =>{
+const getMatches = async (req, res) =>{
     try {
         
-        const teams = await teamModel.find({userId : req.userId});
+        const teams = await matchModel.find({userId : req.userId});
         res.status(200).json(teams);
 
     } catch (error) {
@@ -39,6 +39,6 @@ const getTeams = async (req, res) =>{
 }
 
 module.exports = {
-    createTeam,
-    getTeams
+    createMatch,
+    getMatches
 }

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const noteRouter = require("./routes/noteRoutes");
 const userRouter = require("./routes/userRoutes");
-const teamRouter = require("./routes/teamRoutes");
+const matchRouter = require("./routes/matchRoutes");
 const dotenv = require("dotenv");
 const cors = require("cors");
 
@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use("/users", userRouter);
 app.use("/note", noteRouter);
-app.use("/team", teamRouter);
+app.use("/match", matchRouter);
 
 app.get("/", (req, res) =>{
     res.send("Notes API From CheezyCode");

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const TeamSchema = mongoose.Schema({
+const MatchSchema = mongoose.Schema({
 
     team1 : {
         type : String,
@@ -29,4 +29,4 @@ const TeamSchema = mongoose.Schema({
 
 }, {timestamps : true});
 
-module.exports = mongoose.model("Team", TeamSchema);
+module.exports = mongoose.model("match", MatchSchema);
