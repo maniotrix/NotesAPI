@@ -7,7 +7,7 @@ const ContestSchema = mongoose.Schema({
         required: true
     },
     prize_pool : {
-        type : Number,
+        type : String,
         required: true
     },
     entry_fee : {
