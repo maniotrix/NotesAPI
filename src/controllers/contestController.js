@@ -38,7 +38,20 @@ const getContests = async (req, res) =>{
     }
 }
 
+const getFilteredContests = async (req, res) =>{
+    try {
+        // req.boddy is array of ids. eg: [id1, id2,....]
+        const contests = await contestModel.find({userId : req.userId, '_id': { $in: req.body}});
+        res.status(200).json(contests);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message: "Something went wrong"});
+    }
+}
+
 module.exports = {
     createContest,
-    getContests
+    getContests,
+    getFilteredContests
 }

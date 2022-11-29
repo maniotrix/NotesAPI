@@ -10,6 +10,12 @@ Contest:
     "max_team_entries" : 20
 }
 
+FilterContest:
+
+["6386317fb1cb94945c8ec9b0",
+ "638636c014933fe66b57bd02"
+]
+
 Match:
 
 {
