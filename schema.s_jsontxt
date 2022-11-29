@@ -19,5 +19,7 @@ Match:
     "date" : "5-12-2022",
     "match_mode" : "NIGHT",
     "tournament" : "IPL T20 2022",
-    "mega_prize": "₹1.5 Crores"
+    "mega_prize": "₹1.5 Crores",
+    "contests": ["6386317fb1cb94945c8ec9b0",
+                 "638636c014933fe66b57bd02"]
 }

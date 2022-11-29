@@ -30,6 +30,10 @@ const MatchSchema = mongoose.Schema({
         type : String,
         required: true
     },
+    contests: {
+        type: [String],
+        required: true
+    }
 
 }, {timestamps : true});
 
