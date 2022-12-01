@@ -6,7 +6,7 @@ Contest:
     "entry_fee" : "₹29",
     "total_spots" : 114942,
     "first_prize" : "₹1.5 Lakhs",
-    "winnner_teams_percent" : 55,
+    "winner_teams_percent" : 55,
     "max_team_entries" : 20
 }
 

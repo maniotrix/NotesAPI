@@ -21,7 +21,7 @@ const ContestSchema = mongoose.Schema({
         type : String,
         required: true
     },
-    winnner_teams_percent : {
+    winner_teams_percent : {
         type : Number,
         required: true
     },
