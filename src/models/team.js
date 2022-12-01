@@ -28,7 +28,6 @@ const TeamSchema = mongoose.Schema({
     },
     logo_url : {
         type : String,
-        required: true
     }, 
 
 }, {timestamps : true});

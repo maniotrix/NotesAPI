@@ -3,6 +3,8 @@ const app = express();
 const noteRouter = require("./routes/noteRoutes");
 const userRouter = require("./routes/userRoutes");
 const matchRouter = require("./routes/matchRoutes");
+const teamRouter = require("./routes/teamRoutes");
+const fantasyTeamRouter = require("./routes/fantasyTeamRoutes");
 const contestRouter = require("./routes/contestRoutes");
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -20,6 +22,8 @@ app.use("/users", userRouter);
 app.use("/note", noteRouter);
 app.use("/match", matchRouter);
 app.use("/contest", contestRouter);
+app.use("/team", teamRouter);
+app.use("/fantasyteam", fantasyTeamRouter);
 
 
 app.get("/", (req, res) =>{
