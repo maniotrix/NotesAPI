@@ -7,6 +7,6 @@ contestRouter.get("/", auth, getContests);
 
 contestRouter.post("/", auth, createContest);
 
-contestRouter.get("/filter", auth, getFilteredContests);
+contestRouter.post("/filter", auth, getFilteredContests);
 
 module.exports = contestRouter;
