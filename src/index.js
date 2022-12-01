@@ -30,7 +30,7 @@ app.get("/", (req, res) =>{
     res.send("Notes API From CheezyCode");
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const uri = "mongodb+srv://admin:admin@cluster0.patigyo.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(uri)
