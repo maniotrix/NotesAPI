@@ -19,13 +19,32 @@ FilterContest:
 Match:
 
 {
-    "team1" : "KKR",
-    "team2" : "LSG",
+    "team1" : {
+        "short_name": "CSK",
+        "team1_id": "63888d318122cd370adc47d2"
+    },
+    "team2" : {
+        "short_name": "MI",
+        "team2_id": "63888e7d8122cd370adc47d4"
+    },
     "match_status" : "PENDING",
     "date" : "5-12-2022",
     "match_mode" : "NIGHT",
     "tournament" : "IPL T20 2022",
     "mega_prize": "₹1.5 Crores",
-    "contests": ["6386317fb1cb94945c8ec9b0",
+    "contests": ["63883125e6330cc8627f9eae",
                  "638636c014933fe66b57bd02"]
+}
+
+Team 
+
+
+{
+    "short_name" : "CSK", 
+    "full_name" : "Chennai Super Kings",   
+    "wicketkeepers": ["MS Dhoni"],
+    "batters": ["Ravindra Jadeja","Adam Milne","Subhranshu Senapati","Mukesh Choudhary","Prashant Solanki"],
+    "bowlers": ["Prashant Solanki","C Hari Nishaanth","N Jagadeesan","Chris Jordan","K Bhagath Varma"],
+    "all_rounders": ["Dwayne Bravo","Ambati Rayudu","Deepak Chahar","Rajvardhan Hangarkekar","Dwaine Pretorius"]
+    
 }

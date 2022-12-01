@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const MatchSchema = mongoose.Schema({
 
     team1 : {
-        type : String,
-        required: true
+        short_name: String,
+        team1_id: String
     },
     team2 : {
-        type: String,
-        required: true
+        short_name: String,
+        team2_id: String
     },
     match_status : {
         type : String,
