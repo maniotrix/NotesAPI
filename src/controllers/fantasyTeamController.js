@@ -2,16 +2,16 @@ const fantasyTeamModel = require("../models/fantasy_team");
 
 const createFantasyTeam = async (req, res) =>{
     
-    const {short_name, full_name, wicketkeepers, batters, bowlers,all_rounders,logo_url} = req.body;
+    const {name, wicketkeepers, batters, bowlers,all_rounders,captain, vice_captain} = req.body;
 
     const newFantasyTeam = new fantasyTeamModel({
-        short_name : short_name, 
-        full_name : full_name,   
+        name: name,   
         wicketkeepers: wicketkeepers,
         batters: batters,
         bowlers: bowlers,
         all_rounders: all_rounders,
-        logo_url : logo_url
+        captain: captain,
+        vice_captain: vice_captain
     });
 
     try {
