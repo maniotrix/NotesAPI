@@ -51,18 +51,12 @@ const FantasyTeamSchema = mongoose.Schema({
         required: true
     },
     captain : {
-        type: {
-            name: String,
-            team_name: String
-        },
-        required: true
+        name: String,
+        team_name: String
     },
     vice_captain : {
-        type: {
-            name: String,
-            team_name: String
-        },
-        required: true
+        name: String,
+        team_name: String
     },
 
 }, {timestamps : true});
