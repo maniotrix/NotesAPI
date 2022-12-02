@@ -26,9 +26,6 @@ const FantasyTeamSchema = mongoose.Schema({
         type: [String],
         required: true
     },
-    logo_url : {
-        type : String,
-    },
     captain : {
         type : String,
         required: true
